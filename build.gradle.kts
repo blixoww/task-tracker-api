@@ -1,10 +1,15 @@
 plugins {
-    id("java")
     id("org.springframework.boot") version "3.5.7"
+    id("io.spring.dependency-management") version "1.1.4"
+    id("java")
 }
-apply(plugin = "io.spring.dependency-management")
+
 group = "fr.app"
 version = "1.0"
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+}
 
 repositories {
     mavenCentral()
@@ -13,9 +18,12 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
     runtimeOnly("com.h2database:h2")
 
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("com.fasterxml.jackson.core:jackson-databind")
+    implementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("org.junit.jupiter:junit-jupiter:5.7.1")
 }
 
 tasks.test {
