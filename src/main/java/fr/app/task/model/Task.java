@@ -1,8 +1,6 @@
 package fr.app.task.model;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
-
 import java.time.Instant;
 
 @Entity
