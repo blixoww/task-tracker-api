@@ -2,8 +2,12 @@
 
 [![Build](https://github.com/blixoww/task-tracker-api/actions/workflows/ci.yml/badge.svg)](https://github.com/blixoww/task-tracker-api/actions/workflows/ci.yml)
 [![Docker](https://img.shields.io/badge/Docker-ready-blue?logo=docker)](https://hub.docker.com/)
+[![GitOps with ArgoCD](https://img.shields.io/badge/GitOps-ArgoCD-success?style=flat&logo=argoproj)](http://192.168.1.40:8080/applications)
+[![k3s Cluster](https://img.shields.io/badge/k3s-v1.30+-00c7b7?style=flat&logo=kubernetes)](https://k3s.io)
+[![GHCR Registry](https://img.shields.io/badge/Image-GHCR-blue?logo=github)](https://ghcr.io/blixoww/task-tracker-api)
 
 Une API REST pour gérer des tâches, développée avec **Spring Boot**, **Spring Data JPA** et **H2** (base en mémoire).
+Déploiement **automatisé** via **ArgoCD** sur **Kubernetes**.
 
 ---
 
@@ -26,6 +30,8 @@ Une API REST pour gérer des tâches, développée avec **Spring Boot**, **Sprin
 - Gradle 8
 - Jackson pour JSON
 - Docker (optionnel)
+- ArgoCD
+- Kubernetes (k3s)
 
 ---
 
@@ -33,8 +39,7 @@ Une API REST pour gérer des tâches, développée avec **Spring Boot**, **Sprin
 
 - Build Gradle
 - Tests unitaires et d’intégration
-- Build et push Docker si DOCKER_USERNAME est fourni
-
+- Push de l'image push image sur **GHCR**  
 ---
 
 ## ⚡ Prérequis
