@@ -23,7 +23,7 @@ dependencies {
 
     implementation("com.fasterxml.jackson.core:jackson-databind")
     implementation("org.springframework.boot:spring-boot-starter-test")
-    implementation("org.junit.jupiter:junit-jupiter:5.7.1"
+    implementation("org.junit.jupiter:junit-jupiter:5.7.1")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 }
 
