@@ -14,7 +14,13 @@ spec:
     spec:
       containers:
       - name: task-tracker-api
-        image: task-tracker-api:${{ github.sha }}
-        imagePullPolicy: Always                   
+        image: ghcr.io/blixoww/task-tracker-api:${{ github.sha }}
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
