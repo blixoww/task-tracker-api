@@ -9,8 +9,6 @@
 Une API REST pour gérer des tâches, développée avec **Spring Boot**, **Spring Data JPA** et **H2** (base en mémoire).
 Déploiement **automatisé** via **ArgoCD** sur **Kubernetes**.
 
----
-
 ## 🚀 Fonctionnalités
 
 - Créer, lire, mettre à jour et supprimer des tâches (`CRUD`)
@@ -18,8 +16,6 @@ Déploiement **automatisé** via **ArgoCD** sur **Kubernetes**.
 - Retour JSON lisible et indenté
 - Base H2 en mémoire (non persistante)
 - Dockerfile inclus pour exécution conteneurisée
-
----
 
 ## 🛠 Technologies
 
@@ -33,22 +29,17 @@ Déploiement **automatisé** via **ArgoCD** sur **Kubernetes**.
 - ArgoCD
 - Kubernetes (k3s)
 
----
-
 ## 📦 CI/CD
 
 - Build Gradle
 - Tests unitaires et d’intégration
 - Push de l'image push image sur **GHCR**  
----
 
 ## ⚡ Prérequis
 
 - Java 21
 - Docker (optionnel)
 - Gradle ou `./gradlew`
-
----
 
 ## 🏃‍♂️ Lancer l’application
 
@@ -74,7 +65,3 @@ docker run -p 8080:8080 task-tracker-api
 | POST    | `/tasks`         | Crée une tâche (JSON body)                        |
 | PUT     | `/tasks/{id}`    | Met à jour une tâche                              |
 | DELETE  | `/tasks/{id}`    | Supprime une tâche                                |
-
-
-
-
