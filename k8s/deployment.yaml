@@ -17,10 +17,15 @@ spec:
         image: ghcr.io/blixoww/task-tracker-api:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 7070
+        - containerPort: 8080
         livenessProbe:
           httpGet:
             path: /actuator/health
-            port: 7070
+            port: 8080
           initialDelaySeconds: 30
           periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8080
+          initialDelaySeconds: 90

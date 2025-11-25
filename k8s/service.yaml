@@ -5,7 +5,8 @@ metadata:
 spec:
   selector:
     app: task-tracker-api
+  type: NodePort
   ports:
     - port: 7070
-      targetPort: 7070
-  type: LoadBalancer
+      targetPort: 8080
+      nodePort: 30707
